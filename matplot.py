@@ -38,10 +38,13 @@ def predictColour(x,y):
 def addPoint(x,y):
     plt.scatter(x,y, c = predictColour(x,y))
     print('point added')
+    plt.annotate('your point', (x,y))
     plt.show()
 
 createPlot()
-addPoint(5,5) # replace x and y with cordiants
+yourPoint = input('Enter your point')
+pointTup = yourPoint.split(',')
+addPoint(int(pointTup[0]),int(pointTup[1])) 
 
 
     
